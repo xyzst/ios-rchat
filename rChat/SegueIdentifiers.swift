@@ -9,6 +9,6 @@
 import Foundation
 
 struct SegueIdentifiers {
-    static let FROM_REGISTRATION = "fromRegistration"
-    static let FROM_LOGIN = "fromLogin"
+    static let FROM_REGISTRATION: String = "fromRegistration"
+    static let FROM_LOGIN: String = "fromLogin"
 }
