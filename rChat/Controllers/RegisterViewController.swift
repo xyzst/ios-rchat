@@ -20,7 +20,7 @@ class RegisterViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription) // ??? need to notify user about error ???
                 } else {
-                    self.performSegue(withIdentifier: "fromRegistration", sender: self)
+                    self.performSegue(withIdentifier: SegueIdentifiers.FROM_REGISTRATION, sender: self)
                 }
             }
         }

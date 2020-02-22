@@ -18,6 +18,7 @@
 		0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628190235DF01B00E35CAF /* ChatViewController.swift */; };
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
 		5855CA7C2401BED300AC3C16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5855CA7B2401BED300AC3C16 /* GoogleService-Info.plist */; };
+		5855CA7E2401DA3B00AC3C16 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5855CA7D2401DA3B00AC3C16 /* SegueIdentifiers.swift */; };
 		A873C6D2278F0BB85D080CC2 /* Pods_rChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C3FFAA54D4261548192361 /* Pods_rChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5855CA7B2401BED300AC3C16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5855CA7D2401DA3B00AC3C16 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SegueIdentifiers.swift; path = rChat/SegueIdentifiers.swift; sourceTree = SOURCE_ROOT; };
 		6DEE9F50EB8A2DDF710B9C1B /* Pods-rChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rChat.release.xcconfig"; path = "Target Support Files/Pods-rChat/Pods-rChat.release.xcconfig"; sourceTree = "<group>"; };
 		92C3FFAA54D4261548192361 /* Pods_rChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 		0B628192235DF02000E35CAF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5855CA7D2401DA3B00AC3C16 /* SegueIdentifiers.swift */,
 				0B62818A235DF00000E35CAF /* WelcomeViewController.swift */,
 				0B62818C235DF00B00E35CAF /* RegisterViewController.swift */,
 				0B62818E235DF01000E35CAF /* LoginViewController.swift */,
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5855CA7E2401DA3B00AC3C16 /* SegueIdentifiers.swift in Sources */,
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				0B628179235DEE8100E35CAF /* SceneDelegate.swift in Sources */,

@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription)
                 } else {
-                    self.performSegue(withIdentifier: "fromLogin", sender: self)
+                    self.performSegue(withIdentifier: SegueIdentifiers.FROM_LOGIN, sender: self)
                 }
             }
         }
