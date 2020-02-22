@@ -7,25 +7,14 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: CLTypingLabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        titleLabel.text = ""
-        
-        let title = "⚡️rChat"
-        var i = 0.0
-        for c in title {
-            Timer.scheduledTimer(withTimeInterval: 0.15 * i, repeats: false) { (t) in
-                self.titleLabel.text?.append(c)
-            }
-            i += 1
-        }
+        titleLabel.text = "⚡️rChat"
     }
-    
-
 }
