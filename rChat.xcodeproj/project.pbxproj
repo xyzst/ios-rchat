@@ -17,6 +17,8 @@
 		0B62818F235DF01000E35CAF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B62818E235DF01000E35CAF /* LoginViewController.swift */; };
 		0B628191235DF01B00E35CAF /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B628190235DF01B00E35CAF /* ChatViewController.swift */; };
 		0B62819E235F0F4D00E35CAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B62819D235F0F4D00E35CAF /* README.md */; };
+		581F999224187EE00065D3AE /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581F999024187EE00065D3AE /* MessageCell.swift */; };
+		581F999324187EE00065D3AE /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581F999124187EE00065D3AE /* MessageCell.xib */; };
 		5855CA7C2401BED300AC3C16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5855CA7B2401BED300AC3C16 /* GoogleService-Info.plist */; };
 		5855CA7E2401DA3B00AC3C16 /* SegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5855CA7D2401DA3B00AC3C16 /* SegueIdentifiers.swift */; };
 		5855CA802401DC9100AC3C16 /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5855CA7F2401DC9100AC3C16 /* ApplicationConstants.swift */; };
@@ -38,6 +40,8 @@
 		0B62818E235DF01000E35CAF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0B628190235DF01B00E35CAF /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B62819D235F0F4D00E35CAF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		581F999024187EE00065D3AE /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		581F999124187EE00065D3AE /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		5855CA7B2401BED300AC3C16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5855CA7D2401DA3B00AC3C16 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SegueIdentifiers.swift; path = rChat/SegueIdentifiers.swift; sourceTree = SOURCE_ROOT; };
 		5855CA7F2401DC9100AC3C16 /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				0B62817C235DEE8100E35CAF /* Main.storyboard */,
+				581F999024187EE00065D3AE /* MessageCell.swift */,
+				581F999124187EE00065D3AE /* MessageCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B628183235DEE8400E35CAF /* LaunchScreen.storyboard in Resources */,
+				581F999324187EE00065D3AE /* MessageCell.xib in Resources */,
 				0B628180235DEE8400E35CAF /* Assets.xcassets in Resources */,
 				5855CA7C2401BED300AC3C16 /* GoogleService-Info.plist in Resources */,
 				0B62819E235F0F4D00E35CAF /* README.md in Resources */,
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5855CA7E2401DA3B00AC3C16 /* SegueIdentifiers.swift in Sources */,
+				581F999224187EE00065D3AE /* MessageCell.swift in Sources */,
 				0B62818B235DF00000E35CAF /* WelcomeViewController.swift in Sources */,
 				0B628177235DEE8100E35CAF /* AppDelegate.swift in Sources */,
 				5880047E2418764600E45949 /* Message.swift in Sources */,
