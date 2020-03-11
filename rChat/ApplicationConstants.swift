@@ -10,4 +10,6 @@ import Foundation
 
 struct ApplicationConstants {
     static let APPLICATION_DISPLAY_NAME: String = "⚡️rChat"
+    static let CELL_IDENTIFIER = "ReusableCell"
+    static let CELL_NIB_NAME = "MessageCell"
 }
