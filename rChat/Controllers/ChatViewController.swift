@@ -29,12 +29,11 @@ class ChatViewController: UIViewController {
     }
     
     func reloadMessages() {
-        messages = []
-        
-        db.collection(ApplicationConstants.MESSAGES_COLLECTION).getDocuments { (query, err) in
+        db.collection(ApplicationConstants.MESSAGES_COLLECTION).addSnapshotListener { (query, err) in
             if let e = err {
                 print("Unable to retrieve data from persistence store: \(e)")
             } else {
+                self.messages = []
                 if let q = query?.documents {
                     for m in q {
                         let d = m.data()
