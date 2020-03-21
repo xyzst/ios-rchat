@@ -16,4 +16,5 @@ struct ApplicationConstants {
     static let MESSAGES_COLLECTION = "messages"
     static let SENDER_FIELD = "sender"
     static let BODY_FIELD = "body"
+    static let DATE_FIELD = "timestamp"
 }

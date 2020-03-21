@@ -29,7 +29,7 @@ class ChatViewController: UIViewController {
     }
     
     func reloadMessages() {
-        db.collection(ApplicationConstants.MESSAGES_COLLECTION).addSnapshotListener { (query, err) in
+        db.collection(ApplicationConstants.MESSAGES_COLLECTION).order(by: ApplicationConstants.DATE_FIELD).addSnapshotListener { (query, err) in
             if let e = err {
                 print("Unable to retrieve data from persistence store: \(e)")
             } else {
@@ -57,7 +57,8 @@ class ChatViewController: UIViewController {
             // send data to firestore
             db.collection(ApplicationConstants.MESSAGES_COLLECTION).addDocument(data: [
                 ApplicationConstants.SENDER_FIELD: sender,
-                ApplicationConstants.BODY_FIELD: body
+                ApplicationConstants.BODY_FIELD: body,
+                ApplicationConstants.DATE_FIELD: Date().timeIntervalSince1970
             ]) { (e) in
                 if let err = e {
                     print("Unable to save the data: \(err)")
