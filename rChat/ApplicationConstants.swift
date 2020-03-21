@@ -17,4 +17,7 @@ struct ApplicationConstants {
     static let SENDER_FIELD = "sender"
     static let BODY_FIELD = "body"
     static let DATE_FIELD = "timestamp"
+    
+    static let LIGHT_PURPLE = "BrandLightPurple"
+    static let PURPLE = "BrandPurple"
 }

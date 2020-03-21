@@ -43,6 +43,8 @@ class ChatViewController: UIViewController {
                             // allows update ui from main thread
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(item: self.messages.count - 1, section: 0) // scroll to last item of table view, in the first section
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -67,6 +69,11 @@ class ChatViewController: UIViewController {
                 }
             }
         }
+        
+        // clear text field after the send button is pressed
+        DispatchQueue.main.async {
+            self.messageTextfield.text = ""
+        }
     }
     
     @IBAction func logoutPressed(_ sender: UIBarButtonItem) {
@@ -88,10 +95,22 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = messages[indexPath.row]
         let c = tableView.dequeueReusableCell(withIdentifier: ApplicationConstants.CELL_IDENTIFIER, for: indexPath) as! MessageCell
-        
-        c.label.text = messages[indexPath.row].body
-        
+        c.label.text = message.body
+        if let currUser = Auth.auth().currentUser?.email {
+            if currUser == message.sender {
+                c.leftImageView.isHidden = true
+                c.rightImageView.isHidden = false
+                c.messageBubble.backgroundColor = UIColor(named: ApplicationConstants.LIGHT_PURPLE)
+                c.label.textColor = UIColor(named: ApplicationConstants.PURPLE)
+            } else {
+                c.leftImageView.isHidden = false
+                c.rightImageView.isHidden = true
+                c.messageBubble.backgroundColor = UIColor(named: ApplicationConstants.PURPLE)
+                c.label.textColor = UIColor(named: ApplicationConstants.LIGHT_PURPLE)
+            }
+        }
         return c
     }
 }
