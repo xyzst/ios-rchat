@@ -16,11 +16,7 @@ class ChatViewController: UIViewController {
     
     let db = Firestore.firestore()
     
-    var messages: [Message] = [
-        Message(sender: "1@2.com", body: "Hey!"),
-        Message(sender: "2@3.com", body: "Yo!"),
-        Message(sender: "1@2.com", body: "What's good?")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +25,31 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         tableView.register(UINib(nibName: ApplicationConstants.CELL_NIB_NAME, bundle: nil), forCellReuseIdentifier: ApplicationConstants.CELL_IDENTIFIER)
+        reloadMessages()
+    }
+    
+    func reloadMessages() {
+        messages = []
+        
+        db.collection(ApplicationConstants.MESSAGES_COLLECTION).getDocuments { (query, err) in
+            if let e = err {
+                print("Unable to retrieve data from persistence store: \(e)")
+            } else {
+                if let q = query?.documents {
+                    for m in q {
+                        let d = m.data()
+                        if let s = d[ApplicationConstants.SENDER_FIELD] as? String, let b = d[ApplicationConstants.BODY_FIELD] as? String {
+                            self.messages.append(Message(sender: s, body: b))
+                            
+                            // allows update ui from main thread
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
