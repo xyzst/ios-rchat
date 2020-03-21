@@ -12,4 +12,8 @@ struct ApplicationConstants {
     static let APPLICATION_DISPLAY_NAME: String = "⚡️rChat"
     static let CELL_IDENTIFIER = "ReusableCell"
     static let CELL_NIB_NAME = "MessageCell"
+    
+    static let MESSAGES_COLLECTION = "messages"
+    static let SENDER_FIELD = "sender"
+    static let BODY_FIELD = "body"
 }
